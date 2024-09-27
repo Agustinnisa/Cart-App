@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -37,10 +38,10 @@ function App() {
     setTotalQuantity((prevQuantity) => prevQuantity + quantityDifference);
     setTotalPrice((prevPrice) => parseFloat((prevPrice + priceDifference).toFixed(2)));
   };
-  
+
   return (
     <>
-
+      <Navbar totalQuantity={totalQuantity} totalPrice={totalPrice} />
     </>
   )
 }
