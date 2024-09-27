@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import CartList from './components/CardList';
-import { Container } from 'react-bootstrap';
+import { Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -51,4 +51,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

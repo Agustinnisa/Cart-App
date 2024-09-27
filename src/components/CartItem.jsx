@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import Counter from "./Counter";
 
 function CartItem({ product, updateCart }) {
+    const [quantity, setQuantity] = useState(product.quantity);
+
     const handleQuantityChange = (newQuantity) => {
-        const quantityDifference = newQuantity - product.quantity;
+        const quantityDifference = newQuantity - quantity;
+        setQuantity(newQuantity);
         updateCart(quantityDifference, product.price * quantityDifference);
-        product.quantity = newQuantity;
         
     };
 
@@ -28,7 +30,7 @@ function CartItem({ product, updateCart }) {
                                 <Card.Text>Price: ${product.price}</Card.Text>
                             </Col>
                             <Col md={3} className="d-flex align-items-center">
-                                <Counter quantity={product.quantity} onQuantityChange={handleQuantityChange} />
+                                <Counter quantity={quantity} onQuantityChange={handleQuantityChange} />
                             </Col>
                             <Col md={3} className="d-flex align-items-center">
                                 <Card.Text className="mb-0">
