@@ -1,12 +1,25 @@
-import React from "react";
+import { useState } from "react";
 import { Button, ButtonGroup } from "react-bootstrap";
 
 function Counter({ quantity, onQuantityChange }) {
-    const increment = () => onQuantityChange(quantity + 1);
+    const [count, setCount] = useState(quantity);
+
+    const increment = () => { 
+        setCount((prevCount) => {
+            const newCount = prevCount + 1;
+            onQuantityChange(newCount);
+            return newCount;
+        });
+    };
+
     const decrement = () => {
-        if (quantity > 1) {
-            onQuantityChange(quantity - 1);
-        }
+        if (count === 0) return;
+        setCount((prevCount) => {
+            const newCount = prevCount - 1;
+            onQuantityChange(newCount);
+            return newCount;
+        });
+        
     };
 
     return (
@@ -15,7 +28,7 @@ function Counter({ quantity, onQuantityChange }) {
                 -
             </Button>
             <Button variant="outline-secondary" disabled>
-                {quantity}
+                {count}
             </Button>
             <Button variant="outline-success" onClick={increment}>
                 +
