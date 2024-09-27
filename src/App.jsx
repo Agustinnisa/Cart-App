@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
+import CartList from './components/CardList';
+import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -42,6 +44,9 @@ function App() {
   return (
     <>
       <Navbar totalQuantity={totalQuantity} totalPrice={totalPrice} />
+      <Container className="mt-4">
+        <CartList products={products} updateCart={updateCart} />
+      </Container>
     </>
   )
 }
