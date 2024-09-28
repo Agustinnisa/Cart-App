@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import './index.css';
-import CartList from './components/CardList';
+import CartList from './components/CartList';
 import { Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -9,19 +9,18 @@ function App() {
   const [products, setProducts] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [quantityCart, setQuantityCart] = useState(0);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products?limit=5")
       .then((res) => res.json())
       .then((data) => {
-        // Menambahkan properti quantity ke setiap produk
         const productsWithQuantity = data.map((product) => ({
           ...product,
-          quantity: 1,
+          quantity: 0,
         }));
         setProducts(productsWithQuantity);
 
-        // Inisialisasi totalQuantity dan totalPrice
         const initialTotalQuantity = productsWithQuantity.reduce(
           (acc, product) => acc + product.quantity,
           0
@@ -36,20 +35,20 @@ function App() {
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
 
-  // Handle total price dan quantity updates
   const updateCart = (quantityDifference, priceDifference) => {
     setTotalQuantity((prevQuantity) => prevQuantity + quantityDifference);
     setTotalPrice((prevPrice) => parseFloat((prevPrice + priceDifference).toFixed(2)));
+    setQuantityCart((prevCart) => prevCart + quantityDifference);
   };
 
   return (
     <>
-      <Navbar totalQuantity={totalQuantity} totalPrice={totalPrice} />
+      <Navbar totalQuantity={quantityCart} totalPrice={totalPrice} />
       <Container className="mt-4">
         <CartList products={products} updateCart={updateCart} />
       </Container>
     </>
-  )
+  );
 }
 
 export default App;

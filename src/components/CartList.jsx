@@ -7,7 +7,7 @@ function CartList({ products, updateCart }) {
         <Row>
             {products.map((product) => (
                 <Col md={12} key={product.id}>
-                    <CartItem product={product} updatecart={updateCart} />
+                    <CartItem product={product} updateCart={updateCart} />
                 </Col>
             ))}
         </Row>

@@ -14,6 +14,7 @@ function Navbar({ totalQuantity, totalPrice }) {
             style={{ width: "150px", height: "auto" }}
             className="d-inline-block align-top"
           />
+          
         </BootstrapNavbar.Brand>
         <Nav className="ml-auto">
           <Badge bg="secondary" className="me-2">

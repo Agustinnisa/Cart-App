@@ -6,11 +6,9 @@ function CartItem({ product, updateCart }) {
     const [quantity, setQuantity] = useState(product.quantity);
 
     const handleQuantityChange = (newQuantity) => {
-        if (newQuantity >= 1) {
-            const quantityDifference = newQuantity - quantity;
-            setQuantity(newQuantity);
-            updateCart(quantityDifference, product.price * quantityDifference);
-        }   
+        const quantityDifference = newQuantity - quantity;
+        setQuantity(newQuantity);
+        updateCart(quantityDifference, product.price * quantityDifference);
     };
 
     return (

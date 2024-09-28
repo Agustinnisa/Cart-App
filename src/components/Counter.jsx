@@ -1,26 +1,23 @@
 import React from "react";
-import { Button, ButtonGroup } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 function Counter({ quantity, onQuantityChange }) {
-    const increment = () => onQuantityChange(quantity + 1);
+    const increment = () => {
+        onQuantityChange(quantity + 1);
+    };
+
     const decrement = () => {
-        if (quantity > 1) {
+        if (quantity > 0) {
             onQuantityChange(quantity - 1);
         }
     };
 
     return (
-        <ButtonGroup>
-            <Button variant="outline-danger" onClick={decrement}>
-                -
-            </Button>
-            <Button variant="outline-secondary" disabled>
-                {quantity}
-            </Button>
-            <Button variant="outline-success" onClick={increment}>
-                +
-            </Button>
-        </ButtonGroup>
+        <div>
+            <Button variant="outline-danger" onClick={decrement}>-</Button>
+            <span className="mx-2">{quantity}</span>
+            <Button variant="outline-success" onClick={increment}>+</Button>
+        </div>
     );
 }
 
