@@ -1,0 +1,19 @@
+.navbar-logo {
+    width: 90px;
+    height: 90px;
+}
+
+.navbar-cart-icon {
+    cursor: pointer;
+    color: rgb(124, 53, 27);
+    transition: rgb(124, 53, 27) 0.3s ease;
+}
+
+.navbar-cart-icon:hover {
+    color: orange;
+}
+
+.navbar-custom {
+    background-color: whitesmoke;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
