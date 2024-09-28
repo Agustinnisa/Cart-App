@@ -1,0 +1,17 @@
+.cartItemCard {
+  border: 1px solid #f3eeee;
+  background-color: #f3eeee;
+}
+
+.cardTitle {
+  color: #763d14;
+  font-weight: bold;
+}
+
+.cardText {
+  color: #763d14;
+}
+
+.counter {
+  margin-right: 10px;
+}

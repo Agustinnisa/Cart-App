@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import styles from "./Counter.module.css";
 
 function Counter({ quantity, onQuantityChange }) {
     const increment = () => {
@@ -13,10 +14,10 @@ function Counter({ quantity, onQuantityChange }) {
     };
 
     return (
-        <div>
-            <Button variant="outline-danger" onClick={decrement}>-</Button>
+        <div className={styles.counterContainer}>
+            <Button className={styles.counterBtn} onClick={decrement}>-</Button>
             <span className="mx-2">{quantity}</span>
-            <Button variant="outline-success" onClick={increment}>+</Button>
+            <Button className={`${styles.counterBtn} ${styles.incrementBtn}`} onClick={increment}>+</Button>
         </div>
     );
 }

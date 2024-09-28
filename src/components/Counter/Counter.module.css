@@ -1,0 +1,18 @@
+.counterContainer {
+    display: flex;
+    align-items: center;
+}
+
+.counterBtn {
+    background-color: #763d14;
+    color: whitesmoke;
+    border: none;
+}
+
+.counterBtn:hover {
+    background-color: #c1723a;
+}
+
+.incrementBtn {
+    margin-left: 10px;
+}

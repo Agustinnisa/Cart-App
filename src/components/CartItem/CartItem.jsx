@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card, Row, Col } from "react-bootstrap";
-import Counter from "./Counter";
+import Counter from "../Counter/Counter";
+import styles from "./CartItem.module.css";
 
 function CartItem({ product, updateCart }) {
     const [quantity, setQuantity] = useState(product.quantity);
@@ -12,7 +13,7 @@ function CartItem({ product, updateCart }) {
     };
 
     return (
-        <Card className="mb-3">
+        <Card className={`${styles.cartItemCard} mb-3 p-3`}>
             <Row className="g-0">
                 <Col md={2} className="d-flex align-items-center justify-content-center">
                     <Card.Img
@@ -25,8 +26,8 @@ function CartItem({ product, updateCart }) {
                     <Card.Body>
                         <Row>
                             <Col md={6}>
-                                <Card.Title>{product.title}</Card.Title>
-                                <Card.Text>Price: ${product.price}</Card.Text>
+                                <Card.Title className={styles.cardTitle}>{product.title}</Card.Title>
+                                <Card.Text className={styles.cardText}>Price: ${product.price}</Card.Text>
                             </Col>
                             <Col md={3} className="d-flex align-items-center">
                                 <Counter quantity={quantity} onQuantityChange={handleQuantityChange} />
