@@ -1,43 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 
 .counterContainer {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    align-items: center;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .counterBtn {
-    background-color: #763d14 !important;
-    color: whitesmoke !important;
-    border: none !important;
-    font-family: 'Poppins', sans-serif;
-    padding: 8px 12px;
-    font-weight: 500;
-    font-size: 15px;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #763d14 !important;
+  color: whitesmoke !important;
+  border: none !important;
+  font-family: "Poppins", sans-serif;
+  padding: 8px 12px;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .counterBtn:hover {
-    background-color: #c1723a !important;
+  background-color: #c1723a !important;
 }
 
 .decrementBtn {
-    background-color: #dbcbbf !important;
-    color: #763d14 !important;
-    border: none;
-    font-family: 'Poppins', sans-serif;
-    padding: 8px 12px;
-    font-weight: 500;
-    font-size: 15px;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #dbcbbf !important;
+  color: #763d14 !important;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  padding: 8px 12px;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .decrementBtn:hover {
-    background-color: #b89696 !important;
+  background-color: #b89696 !important;
 }
 
 .incrementBtn {
-    margin-left: 5px;
+  margin-left: 5px;
 }

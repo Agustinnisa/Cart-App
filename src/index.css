@@ -1,4 +1,10 @@
 .main-content {
-  background-color: #f5d8c3;
+  background-color: #cfa88d;
 }
-  
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-content {
+    padding: 10px 20px;
+    max-width: 100%;
+  }
+}
