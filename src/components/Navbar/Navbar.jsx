@@ -12,21 +12,21 @@ import styles from "./Navbar.module.css";
 
 function Navbar({ totalQuantity, totalPrice }) {
   return (
-    <BootstrapNavbar variant="light" className="navbar-custom shadow-sm">
+    <BootstrapNavbar className={`${styles.customNavbar} shadow-sm`}>
       <Container>
         <BootstrapNavbar.Brand href="#home">
           <Image
             src={logo}
             alt="Logo"
-            style={{ width: "170px", height: "auto" }}
+            style={{ width: "150px", height: "auto" }}
             className="d-inline-block align-top"
           />
         </BootstrapNavbar.Brand>
-        <Nav className="ml-auto d-flex align-items-center">
-          <div className={styles.cartItemInfo}>
-            <FaShoppingCart style={{ fontSize: "1.8rem", color: "#763d14" }} />{" "}
+        <Nav className="ms-auto">
+          <div className={styles.cartIconContainer}>
+            <FaShoppingCart size={33} className={styles.cartIcon} />
             {totalQuantity > 0 && (
-              <span className="cart-badge">{totalQuantity}</span>
+              <span className={styles.cartBadge}>{totalQuantity}</span>
             )}
           </div>
 
@@ -42,7 +42,7 @@ function Navbar({ totalQuantity, totalPrice }) {
             Items: {totalQuantity}
           </div> */}
 
-          <div className={styles.carttotalInfo}>
+          <div className={styles.cardPrice}>
             Total: ${totalPrice.toFixed(2)}
           </div>
         </Nav>

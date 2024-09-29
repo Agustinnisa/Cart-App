@@ -1,33 +1,34 @@
+.customNavbar {
+  background-color: #fdf8f8 !important;
+}
+
 .cartIconContainer {
   position: relative;
+  display: inline-block;
   margin-right: 20px;
+}
+
+.cartIcon {
+  color: #b3642c; 
 }
 
 .cartBadge {
   position: absolute;
   top: -10px;
   right: -10px;
-  background-color: #f3eeee;
-  color: #763d14;
-  padding: 5px 10px;
-  border-radius: 50%;
-  font-size: 0.75rem;
-  font-weight: bold;
-}
-
-.cartItemInfo {
-  background-color: #f3eeee;
-  color: #763d14;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  margin-right: 1rem;
-  font-weight: bold;
-}
-
-.cartTotalInfo {
-  background-color: #c1723a;
+  background-color: #703409; 
   color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.cardPrice {
+  background-color: #dbcbbf;
+  color: black;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   font-weight: bold;
+  font-size: 16px;
 }
