@@ -44,7 +44,7 @@ function App() {
   return (
     <>
       <Navbar totalQuantity={quantityCart} totalPrice={totalPrice} />
-      <Container className="mt-4">
+      <Container className="main-content mt-4">
         <CartList products={products} updateCart={updateCart} />
       </Container>
     </>
