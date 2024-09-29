@@ -15,9 +15,9 @@ function Counter({ quantity, onQuantityChange }) {
 
     return (
         <div className={styles.counterContainer}>
-            <Button className={styles.counterBtn} onClick={decrement}>-</Button>
+            <Button className={styles.decrementBtn} variant="custom" onClick={decrement}>-</Button>
             <span className="mx-2">{quantity}</span>
-            <Button className={`${styles.counterBtn} ${styles.incrementBtn}`} onClick={increment}>+</Button>
+            <Button className={`${styles.counterBtn} ${styles.incrementBtn}`} variant="custom" onClick={increment}>+</Button>
         </div>
     );
 }

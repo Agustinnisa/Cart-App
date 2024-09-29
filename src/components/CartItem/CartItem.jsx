@@ -34,7 +34,10 @@ function CartItem({ product, updateCart }) {
                             </Col>
                             <Col md={3} className="d-flex align-items-center">
                                 <Card.Text className="mb-0">
-                                    Total: ${(product.price * quantity).toFixed(2)}
+                                    <span className={styles.cardText}>
+                                    Total: 
+                                    ${(product.price * quantity).toFixed(2)}
+                                    </span>
                                 </Card.Text>
                             </Col>
                         </Row>

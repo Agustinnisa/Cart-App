@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 .cartItemCard {
   border: 1px solid #f3eeee;
   background-color: #f3eeee;
 }
 
 .cardTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
   color: #763d14;
   font-weight: bold;
 }
 
 .cardText {
+  font-family: 'Poppins', sans-serif;
+  font: 13px;
   color: #763d14;
 }
 
